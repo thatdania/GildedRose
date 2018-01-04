@@ -37,6 +37,12 @@ describe("Gilded Rose", function() {
       gildedRose.sellInChecker(0)
       expect(gildedRose.items[0].quality).toEqual(7)
     });
+
+    it("#sellInChecker should check the results if its less than 11 or than 6", function(){
+      gildedRose.sellInChecker(0)
+      gildedRose.sellInChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(9)
+    });
   });
 
   // describe("#sellInDoesNotexist", function(){
