@@ -47,7 +47,8 @@ describe("Gilded Rose", function() {
 
   describe("#expiredSellIn", function(){
     it("#expiredSellIn puts the quality value to zero", function(){
-      gildedRose.expiredSellIn()
+      gildedRose.items[0].sellIn = -1
+      gildedRose.expiredSellIn(0)
       expect(gildedRose.items[0].quality).toEqual(0)
     });
   });

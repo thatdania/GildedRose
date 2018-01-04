@@ -71,8 +71,6 @@ class Shop {
   }
 
 
-
-
 sellInChecker(i){
   if(this._sellInchecker6(i)){
     this.items[i].quality += 3
@@ -82,7 +80,11 @@ sellInChecker(i){
   }
 };
 
-
+expiredSellIn(i){
+  if(this.items[i].sellIn < 0){
+    this.items[i].quality = 0
+  }
+}
 
 notAgeBrie(i){
   return this.items[i].name != 'Aged Brie'
@@ -101,7 +103,7 @@ qualityChecker(i){
 };
 
 sellInDoesNotexist(i){
-  return this.items[i].sellIn < 0
+
 }
 
 _sellInchecker11(i){
