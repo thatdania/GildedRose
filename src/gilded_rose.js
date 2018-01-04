@@ -91,11 +91,11 @@ sellInDoesNotexist(i){
   return this.items[i].sellIn < 0
 }
 
-sellInchecker6(i){
+_sellInchecker6(i){
   return this.items[i].sellIn < 6
 }
 
-sellInchecker11(i){
+_sellInchecker11(i){
   return this.items[i].sellIn < 11
 }
 
