@@ -45,11 +45,12 @@ describe("Gilded Rose", function() {
     });
   });
 
-  // describe("#expiredSellIn", function(){
-  //   it("#expiredSellIn puts the quality value to zero", function(){
-  //     expect(gildedRose.qualityChecker(0)).toEqual(true)
-  //   });
-  // });
+  describe("#expiredSellIn", function(){
+    it("#expiredSellIn puts the quality value to zero", function(){
+      gildedRose.expiredSellIn()
+      expect(gildedRose.items[0].quality).toEqual(0)
+    });
+  });
 
 
   // describe("#backstagePassesChecker", function(){

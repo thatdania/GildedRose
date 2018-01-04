@@ -71,6 +71,19 @@ class Shop {
   }
 
 
+
+
+sellInChecker(i){
+  if(this._sellInchecker6(i)){
+    this.items[i].quality += 3
+  }
+  else if(this._sellInchecker11(i)){
+    this.items[i].quality += 2
+  }
+};
+
+
+
 notAgeBrie(i){
   return this.items[i].name != 'Aged Brie'
 };
@@ -85,15 +98,6 @@ notSulfuras(i){
 
 qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
-};
-
-sellInChecker(i){
-  if(this._sellInchecker6(i)){
-    this.items[i].quality += 3
-  }
-  else if(this._sellInchecker11(i)){
-    this.items[i].quality += 2
-  }
 };
 
 sellInDoesNotexist(i){
