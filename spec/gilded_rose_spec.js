@@ -53,12 +53,6 @@ describe("Gilded Rose", function() {
     });
   });
 
-  describe("#notAgeBrie", function(){
-    it("#notAgeBrie should return true based on the condition", function(){
-      expect(gildedRose.notAgeBrie(0)).toEqual(true)
-    });
-  });
-
   describe("#qualityChecker", function(){
     it("#qualityChecker should return true based on the condition", function(){
       expect(gildedRose.qualityChecker(0)).toEqual(true)

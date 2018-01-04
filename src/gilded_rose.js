@@ -70,7 +70,11 @@ class Shop {
     return this.items;
   }
 
-  
+agedBrie(i){
+  if(this.items[i].name === 'Aged Brie'){
+    this.items[i].quality += 1
+  }
+}
 
 backstagePassesChecker(i){
   if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert'){
@@ -99,12 +103,6 @@ expiredSellIn(i){
     this.items[i].quality = 0
   }
 }
-
-
-notAgeBrie(i){
-  return this.items[i].name != 'Aged Brie'
-};
-
 
 qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
