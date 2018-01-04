@@ -3,7 +3,7 @@ describe("Gilded Rose", function() {
 
   beforeEach( function(){
     this.name = "food"
-    this.sellIn = 4
+    this.sellIn = -1
     this.quality = 4
     gildedRose = new Shop([new Item(this.name, this.sellIn, this.quality)]);
   });

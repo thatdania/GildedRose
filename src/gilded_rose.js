@@ -101,4 +101,10 @@ qualityChecker50(i){
   }
 };
 
+sellInexist(i){
+  if(this.items[i].sellIn < 0){
+    return true
+  }
+}
+
 };
