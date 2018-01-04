@@ -14,11 +14,11 @@ describe("Gilded Rose", function() {
     });
   });
 
-  describe("#notBackstagePasses", function(){
-    it("#notBackstagePasses should return true based on the condition", function(){
-      expect(gildedRose.notBackstagePasses(0)).toEqual(true)
-    });
-  });
+  // describe("#notBackstagePasses", function(){
+  //   it("#notBackstagePasses should return true based on the condition", function(){
+  //     expect(gildedRose.notBackstagePasses(0)).toEqual(true)
+  //   });
+  // });
 
   describe("#notSulfuras", function(){
     it("#notSulfuras should return true based on the condition", function(){
@@ -53,12 +53,11 @@ describe("Gilded Rose", function() {
     });
   });
 
-
   describe("#backstagePassesChecker", function(){
     it("#backstagePassesChecker executes the product's requirements listed", function(){
       gildedRose.items[0].name = "Backstage passes to a TAFKAL80ETC concert"
       gildedRose.backstagePassesChecker(0)
-      expect(gildedRose.items[0].quality)
+      expect(gildedRose.items[0].quality).toEqual(7)
     });
   });
 

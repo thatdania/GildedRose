@@ -70,6 +70,13 @@ class Shop {
     return this.items;
   }
 
+backstagePassesChecker(i){
+  if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert'){
+    this.sellInChecker(i);
+    this.expiredSellIn(i);
+  }
+}
+
 
 sellInChecker(i){
   if(this._sellInchecker6(i)){
@@ -86,13 +93,14 @@ expiredSellIn(i){
   }
 }
 
+
 notAgeBrie(i){
   return this.items[i].name != 'Aged Brie'
 };
 
-notBackstagePasses(i){
-  return this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'
-};
+// notBackstagePasses(i){
+//   return this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'
+// };
 
 notSulfuras(i){
   return this.items[i].name != 'Sulfuras, Hand of Ragnaros'
