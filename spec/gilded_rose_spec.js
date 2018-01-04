@@ -9,14 +9,20 @@ describe("Gilded Rose", function() {
   });
 
   describe("#notAgeBrie", function(){
-    it("#notAgeBrie should return true from the quality", function(){
+    it("#notAgeBrie should return true based on the condition", function(){
       expect(gildedRose.notAgeBrie(0)).toEqual(true)
     });
   });
 
   describe("#notBackstagePasses", function(){
-    it("#notBackstagePasses should return true from the quality", function(){
+    it("#notBackstagePasses should return true based on the condition", function(){
       expect(gildedRose.notBackstagePasses(0)).toEqual(true)
+    });
+  });
+
+  describe("#notSulfuras", function(){
+    it("#notSulfuras should return true based on the condition", function(){
+      expect(gildedRose.notSulfuras(0)).toEqual(true)
     });
   });
 
