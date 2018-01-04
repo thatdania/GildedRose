@@ -50,6 +50,12 @@ describe("Gilded Rose", function() {
     });
   });
 
+  describe("#sellInchecker11", function(){
+    it("#sellInchecker11 should reutrn true base on condition", function(){
+      expect(gildedRose.sellInchecker11(0)).toEqual(true)
+    });
+  });
+
 
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);
