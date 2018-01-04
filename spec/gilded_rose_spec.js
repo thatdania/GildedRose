@@ -23,7 +23,7 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(4)
     });
   });
-  
+
   describe("#sellInChecker", function(){
     it("#sellInChecker should add three to quality if SellIn is less than 6", function(){
       gildedRose.sellInChecker(0)
@@ -48,12 +48,6 @@ describe("Gilded Rose", function() {
   describe("#notAgeBrie", function(){
     it("#notAgeBrie should return true based on the condition", function(){
       expect(gildedRose.notAgeBrie(0)).toEqual(true)
-    });
-  });
-
-  describe("#notSulfuras", function(){
-    it("#notSulfuras should return true based on the condition", function(){
-      expect(gildedRose.notSulfuras(0)).toEqual(true)
     });
   });
 

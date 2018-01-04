@@ -103,13 +103,6 @@ notAgeBrie(i){
   return this.items[i].name != 'Aged Brie'
 };
 
-// notBackstagePasses(i){
-//   return this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'
-// };
-
-notSulfuras(i){
-  return this.items[i].name != 'Sulfuras, Hand of Ragnaros'
-};
 
 qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
