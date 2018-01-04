@@ -8,30 +8,22 @@ describe("Gilded Rose", function() {
     gildedRose = new Shop([new Item(this.name, this.sellIn, this.quality)]);
   });
 
-  describe("#notAgeBrie", function(){
-    it("#notAgeBrie should return true based on the condition", function(){
-      expect(gildedRose.notAgeBrie(0)).toEqual(true)
+  describe("#backstagePassesChecker", function(){
+    it("#backstagePassesChecker executes the product's requirements listed", function(){
+      gildedRose.items[0].name = "Backstage passes to a TAFKAL80ETC concert"
+      gildedRose.backstagePassesChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(7)
     });
   });
 
-  // describe("#notBackstagePasses", function(){
-  //   it("#notBackstagePasses should return true based on the condition", function(){
-  //     expect(gildedRose.notBackstagePasses(0)).toEqual(true)
-  //   });
-  // });
-
-  describe("#notSulfuras", function(){
-    it("#notSulfuras should return true based on the condition", function(){
-      expect(gildedRose.notSulfuras(0)).toEqual(true)
+  describe("#sulfurasChecker", function(){
+    it("#sulfurasChecker executes the product's requirements listed", function(){
+      gildedRose.items[0].name = "Sulfuras, Hand of Ragnaros"
+      gildedRose.sulfurasChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(4)
     });
   });
-
-  describe("#qualityChecker", function(){
-    it("#qualityChecker should return true based on the condition", function(){
-      expect(gildedRose.qualityChecker(0)).toEqual(true)
-    });
-  });
-
+  
   describe("#sellInChecker", function(){
     it("#sellInChecker should add three to quality if SellIn is less than 6", function(){
       gildedRose.sellInChecker(0)
@@ -53,13 +45,25 @@ describe("Gilded Rose", function() {
     });
   });
 
-  describe("#backstagePassesChecker", function(){
-    it("#backstagePassesChecker executes the product's requirements listed", function(){
-      gildedRose.items[0].name = "Backstage passes to a TAFKAL80ETC concert"
-      gildedRose.backstagePassesChecker(0)
-      expect(gildedRose.items[0].quality).toEqual(7)
+  describe("#notAgeBrie", function(){
+    it("#notAgeBrie should return true based on the condition", function(){
+      expect(gildedRose.notAgeBrie(0)).toEqual(true)
     });
   });
+
+  describe("#notSulfuras", function(){
+    it("#notSulfuras should return true based on the condition", function(){
+      expect(gildedRose.notSulfuras(0)).toEqual(true)
+    });
+  });
+
+  describe("#qualityChecker", function(){
+    it("#qualityChecker should return true based on the condition", function(){
+      expect(gildedRose.qualityChecker(0)).toEqual(true)
+    });
+  });
+
+
 
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);

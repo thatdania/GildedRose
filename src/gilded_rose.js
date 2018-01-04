@@ -77,7 +77,6 @@ backstagePassesChecker(i){
   }
 }
 
-
 sellInChecker(i){
   if(this._sellInchecker6(i)){
     this.items[i].quality += 3
