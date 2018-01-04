@@ -77,6 +77,12 @@ backstagePassesChecker(i){
   }
 }
 
+sulfurasChecker(i){
+  if(this.items[i].name === 'Sulfuras, Hand of Ragnaros'){
+    return this.quality 
+  }
+}
+
 sellInChecker(i){
   if(this._sellInchecker6(i)){
     this.items[i].quality += 3
