@@ -113,4 +113,10 @@ sellInchecker6(i){
   }
 }
 
+sellInchecker11(i){
+  if(this.items[i].sellIn < 11){
+    return true
+  }
+}
+
 };
