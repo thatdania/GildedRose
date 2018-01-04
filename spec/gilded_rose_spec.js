@@ -53,11 +53,17 @@ describe("Gilded Rose", function() {
     });
   });
 
-  describe("#qualityChecker", function(){
-    it("#qualityChecker should decrease the quality by 2", function(){
+  describe("#expiryRate", function(){
+    it("#expiryRate should decrease the quality by 2, after once", function(){
       gildedRose.items[0].sellIn = -1
-      gildedRose.qualityChecker(0)
+      gildedRose.expiryRate(0)
       expect(gildedRose.items[0].quality).toEqual(2)
+    });
+  });
+
+  describe("#qualityChecker", function(){
+    it("#qualityChecker should return true based on the condition", function(){
+      expect(gildedRose.qualityChecker(0)).toEqual(true)
     });
   });
 
