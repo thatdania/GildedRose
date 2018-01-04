@@ -15,27 +15,27 @@ class Shop {
   updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
       if (this.notAgeBrie(i) && this.notBackstagePasses(i)) {
-        if (qualityExist(i)) {
+        if (qualityChecker(i)) {
           if (notSulfuras(i)) {
-            this.items[i].quality = this.items[i].quality - 1;
+            this.items[i].quality -= 1;
           }
         }
       }
 
       else {
-        if (qualityChecker50(i)) {
-          this.items[i].quality = this.items[i].quality + 1;
+        if (qualityChecker(i)) {
+          this.items[i].quality += 1;
           if (this.notBackstagePasses(i)) {
 
             if (sellInchecker11(i)) {
-              if (qualityChecker50(i)) {
-                this.items[i].quality = this.items[i].quality + 1;
+              if (qualityChecker(i)) {
+                this.items[i].quality += 1;
               }
             }
 
             if (sellInchecker6(i)) {
-              if (qualityChecker50(i)) {
-                this.items[i].quality = this.items[i].quality + 1;
+              if (qualityChecker(i)) {
+                this.items[i].quality += 1;
               }
             }
 
@@ -47,20 +47,20 @@ class Shop {
       if (sellInexist(i)) {
         if (this.notAgeBrie(i)) {
           if (this.notBackstagePasses(i)) {
-            if (qualityExist(i)) {
+            if (qualityChecker(i)) {
               if (notSulfuras(i)) {
-                this.items[i].quality = this.items[i].quality - 1;
+                this.items[i].quality -= 1;
               }
             }
           }
           else {
-            this.items[i].quality = this.items[i].quality - this.items[i].quality;
+            this.items[i].quality -= this.items[i].quality;
           }
         }
 
         else {
-          if (qualityChecker50(i)) {
-            this.items[i].quality = this.items[i].quality + 1;
+          if (qualityChecker(i)) {
+            this.items[i].quality += 1;
           }
         }
 
@@ -89,10 +89,10 @@ qualityChecker(i){
 
 sellInChecker(i){
   if(this._sellInchecker6(i)){
-    this.items[i].quality = this.items[i].quality + 3
+    this.items[i].quality += 3
   }
   else if(this._sellInchecker11(i)){
-    this.items[i].quality = this.items[i].quality + 2
+    this.items[i].quality += 2
   }
 };
 

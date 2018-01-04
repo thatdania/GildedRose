@@ -45,14 +45,20 @@ describe("Gilded Rose", function() {
     });
   });
 
-  // describe("#sellInDoesNotexist", function(){
-  //   it("#sellInDoesNotexist should return if its more than 0 and less than 50", function(){
-  //     expect(gildedRose.sellInDoesNotexist(0)).toEqual(false)
+  // describe("#expiredSellIn", function(){
+  //   it("#expiredSellIn puts the quality value to zero", function(){
+  //     expect(gildedRose.qualityChecker(0)).toEqual(true)
   //   });
   // });
-  //
 
 
+  // describe("#backstagePassesChecker", function(){
+  //   it("#backstagePassesChecker executes the product's requirements listed", function(){
+  //     gildedRose.items[0].name = 10
+  //     gildedRose.backstagePassesChecker(0)
+  //     expect(gildedRose.items[0])
+  //   });
+  // });
 
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);
