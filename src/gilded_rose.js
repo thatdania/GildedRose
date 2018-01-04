@@ -81,7 +81,12 @@ notBackstagePasses(i){
   if(this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'){
     return true
   }
+};
 
+notSulfuras(i){
+  if(this.items[i].name != 'Sulfuras, Hand of Ragnaros'){
+    return true 
+  }
 }
 
 };
