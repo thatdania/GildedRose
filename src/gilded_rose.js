@@ -23,18 +23,18 @@ class Shop {
       }
 
       else {
-        if (this.items[i].quality < 50) {
+        if (qualityChecker50(i)) {
           this.items[i].quality = this.items[i].quality + 1;
           if (this.notBackstagePasses(i)) {
 
             if (this.items[i].sellIn < 11) {
-              if (this.items[i].quality < 50) {
+              if (qualityChecker50(i)) {
                 this.items[i].quality = this.items[i].quality + 1;
               }
             }
 
             if (this.items[i].sellIn < 6) {
-              if (this.items[i].quality < 50) {
+              if (qualityChecker50(i)) {
                 this.items[i].quality = this.items[i].quality + 1;
               }
             }
@@ -59,7 +59,7 @@ class Shop {
         }
 
         else {
-          if (this.items[i].quality < 50) {
+          if (qualityChecker50(i)) {
             this.items[i].quality = this.items[i].quality + 1;
           }
         }
