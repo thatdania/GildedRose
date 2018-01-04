@@ -39,9 +39,9 @@ describe("Gilded Rose", function() {
     });
 
     it("#sellInChecker should check the results if its less than 11 or than 6", function(){
+      gildedRose.items[0].quality = 10
       gildedRose.sellInChecker(0)
-      gildedRose.sellInChecker(0)
-      expect(gildedRose.items[0].quality).toEqual(9)
+      expect(gildedRose.items[0].quality).toEqual(13)
     });
   });
 

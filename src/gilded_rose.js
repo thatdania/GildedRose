@@ -91,6 +91,9 @@ sellInChecker(i){
   if(this.sellInchecker6(i)){
     this.items[i].quality = this.items[i].quality + 3
   }
+  else if(this.sellInchecker11(i)){
+    this.items[i].quality = this.items[i].quality + 2
+  }
 };
 
 sellInDoesNotexist(i){
