@@ -54,13 +54,13 @@ describe("Gilded Rose", function() {
   });
 
 
-  // describe("#backstagePassesChecker", function(){
-  //   it("#backstagePassesChecker executes the product's requirements listed", function(){
-  //     gildedRose.items[0].name = 10
-  //     gildedRose.backstagePassesChecker(0)
-  //     expect(gildedRose.items[0])
-  //   });
-  // });
+  describe("#backstagePassesChecker", function(){
+    it("#backstagePassesChecker executes the product's requirements listed", function(){
+      gildedRose.items[0].name = "Backstage passes to a TAFKAL80ETC concert"
+      gildedRose.backstagePassesChecker(0)
+      expect(gildedRose.items[0].quality)
+    });
+  });
 
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);

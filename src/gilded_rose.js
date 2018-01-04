@@ -102,10 +102,6 @@ qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
 };
 
-sellInDoesNotexist(i){
-
-}
-
 _sellInchecker11(i){
   return this.items[i].sellIn < 11
 }
@@ -113,7 +109,5 @@ _sellInchecker11(i){
 _sellInchecker6(i){
   return this.items[i].sellIn < 6
 }
-
-
 
 };
