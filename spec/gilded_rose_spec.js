@@ -32,6 +32,12 @@ describe("Gilded Rose", function() {
     });
   });
 
+  describe("#qualityLessThan50", function(){
+    it("#qualityLessThan50 should reutrn true base on condition", function(){
+      expect(gildedRose.qualityLessThan50(0)).toEqual(true)
+    });
+  });
+
 
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);

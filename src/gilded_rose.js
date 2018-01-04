@@ -15,7 +15,7 @@ class Shop {
   updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
       if (this.notAgeBrie(i) && this.notBackstagePasses(i)) {
-        if (this.items[i].quality > 0) {
+        if (qualityExist(i)) {
           if (notSulfuras(i)) {
             this.items[i].quality = this.items[i].quality - 1;
           }
@@ -47,7 +47,7 @@ class Shop {
       if (this.items[i].sellIn < 0) {
         if (this.notAgeBrie(i)) {
           if (this.notBackstagePasses(i)) {
-            if (this.items[i].quality > 0) {
+            if (qualityExist(i)) {
               if (notSulfuras(i)) {
                 this.items[i].quality = this.items[i].quality - 1;
               }
