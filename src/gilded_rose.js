@@ -79,7 +79,7 @@ backstagePassesChecker(i){
 
 sulfurasChecker(i){
   if(this.items[i].name === 'Sulfuras, Hand of Ragnaros'){
-    return this.quality 
+    this.items[i].quality = this.items[i].quality
   }
 }
 
