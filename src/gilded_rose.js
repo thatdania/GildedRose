@@ -87,6 +87,12 @@ notSulfuras(i){
   if(this.items[i].name != 'Sulfuras, Hand of Ragnaros'){
     return true
   }
-}
+};
+
+qualityExist(i){
+  if(this.items[i].quality > 0){
+    return true
+  }
+};
 
 };
