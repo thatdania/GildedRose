@@ -95,4 +95,10 @@ qualityExist(i){
   }
 };
 
+qualityChecker50(i){
+  if(this.items[i].quality < 50){
+    return true
+  }
+};
+
 };
