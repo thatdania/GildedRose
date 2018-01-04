@@ -88,10 +88,10 @@ qualityChecker(i){
 };
 
 sellInChecker(i){
-  if(this.sellInchecker6(i)){
+  if(this._sellInchecker6(i)){
     this.items[i].quality = this.items[i].quality + 3
   }
-  else if(this.sellInchecker11(i)){
+  else if(this._sellInchecker11(i)){
     this.items[i].quality = this.items[i].quality + 2
   }
 };
@@ -100,11 +100,11 @@ sellInDoesNotexist(i){
   return this.items[i].sellIn < 0
 }
 
-sellInchecker11(i){
+_sellInchecker11(i){
   return this.items[i].sellIn < 11
 }
 
-sellInchecker6(i){
+_sellInchecker6(i){
   return this.items[i].sellIn < 6
 }
 

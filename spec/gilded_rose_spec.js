@@ -33,12 +33,12 @@ describe("Gilded Rose", function() {
   });
 
   describe("#sellInChecker", function(){
-    it("#sellInChecker should check the results if its less than 11 or than 6", function(){
+    it("#sellInChecker should add three to quality if SellIn is less than 6", function(){
       gildedRose.sellInChecker(0)
       expect(gildedRose.items[0].quality).toEqual(7)
     });
 
-    it("#sellInChecker should check the results if its less than 11 or than 6", function(){
+    it("#sellInChecker should add three to quality if SellIn is less than 11", function(){
       gildedRose.items[0].quality = 10
       gildedRose.sellInChecker(0)
       expect(gildedRose.items[0].quality).toEqual(13)
@@ -51,17 +51,7 @@ describe("Gilded Rose", function() {
   //   });
   // });
   //
-  describe("#_sellInchecker6", function(){
-    it("#_sellInchecker6 should reutrn true base on condition", function(){
-      expect(gildedRose.sellInchecker6(0)).toEqual(true)
-    });
-  });
 
-  describe("#_sellInchecker11", function(){
-    it("#_sellInchecker11 should reutrn true base on condition", function(){
-      expect(gildedRose.sellInchecker11(0)).toEqual(true)
-    });
-  });
 
 
   // it("should foo", function() {
