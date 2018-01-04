@@ -33,7 +33,7 @@ class Shop {
               }
             }
 
-            if (this.items[i].sellIn < 6) {
+            if (sellInchecker6(i)) {
               if (qualityChecker50(i)) {
                 this.items[i].quality = this.items[i].quality + 1;
               }
@@ -103,6 +103,12 @@ qualityChecker50(i){
 
 sellInexist(i){
   if(this.items[i].sellIn < 0){
+    return true
+  }
+}
+
+sellInchecker6(i){
+  if(this.items[i].sellIn < 6){
     return true
   }
 }
