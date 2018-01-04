@@ -9,16 +9,18 @@ describe("Gilded Rose", function() {
   });
 
   describe("#notAgeBrie", function(){
-    it("#notAgeBrie should minus 1 from the quality", function(){
+    it("#notAgeBrie should return true from the quality", function(){
       expect(gildedRose.notAgeBrie(0)).toEqual(true)
     });
   });
 
   describe("#notBackstagePasses", function(){
-    it("#notBackstagePasses should minus 1 from the quality", function(){
-      expect(gildedRose.notBackstagePasses(0);).toEqual(true)
+    it("#notBackstagePasses should return true from the quality", function(){
+      expect(gildedRose.notBackstagePasses(0)).toEqual(true)
     });
   });
+
+
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);
   //   const items = gildedRose.updateQuality();
