@@ -14,14 +14,11 @@ describe("Gilded Rose", function() {
     });
   });
 
-  
-
-  // describe("#notBackstagePasses", function(){
-  //   it("#notBackstagePasses should minus 1 from the quality", function(){
-  //     gildedRose.notBackstagePasses(0);
-  //     expect(gildedRose.items[0].quality).toEqual(3)
-  //   });
-  // });
+  describe("#notBackstagePasses", function(){
+    it("#notBackstagePasses should minus 1 from the quality", function(){
+      expect(gildedRose.notBackstagePasses(0);).toEqual(true)
+    });
+  });
   // it("should foo", function() {
   //   const gildedRose = new Shop([ new Item("foo", 0, 0) ]);
   //   const items = gildedRose.updateQuality();
