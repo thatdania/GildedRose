@@ -44,7 +44,7 @@ class Shop {
       }
 
 
-      if (this.items[i].sellIn < 0) {
+      if (sellInexist(i)) {
         if (this.notAgeBrie(i)) {
           if (this.notBackstagePasses(i)) {
             if (qualityExist(i)) {
