@@ -8,6 +8,14 @@ describe("Gilded Rose", function() {
     gildedRose = new Shop([new Item(this.name, this.sellIn, this.quality)]);
   });
 
+  describe("#agedBrie", function(){
+    it("#agedBrie executes the product's requirements listed", function(){
+      gildedRose.items[0].name = "Aged Brie"
+      gildedRose.agedBrie(0)
+      expect(gildedRose.items[0].quality).toEqual(5)
+    });
+  });
+
   describe("#backstagePassesChecker", function(){
     it("#backstagePassesChecker executes the product's requirements listed", function(){
       gildedRose.items[0].name = "Backstage passes to a TAFKAL80ETC concert"

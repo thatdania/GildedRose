@@ -70,6 +70,8 @@ class Shop {
     return this.items;
   }
 
+  
+
 backstagePassesChecker(i){
   if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert'){
     this.sellInChecker(i);
