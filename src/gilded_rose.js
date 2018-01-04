@@ -73,8 +73,15 @@ class Shop {
 
 notAgeBrie(i){
   if (this.items[i].name != 'Aged Brie'){
-    this.items[i].quality = this.items[i].quality - 1
+    return true 
   }
 };
+
+notBackstagePasses(i){
+  if(this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'){
+    this.items[i].quality = this.items[i].quality -1
+  }
+
+}
 
 };
