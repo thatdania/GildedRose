@@ -87,16 +87,24 @@ qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
 };
 
+sellInChecker(i){
+  if(this.sellInchecker6(i)){
+    this.items[i].quality = this.items[i].quality + 3
+  }
+};
+
 sellInDoesNotexist(i){
   return this.items[i].sellIn < 0
 }
 
-_sellInchecker6(i){
+sellInchecker11(i){
+  return this.items[i].sellIn < 11
+}
+
+sellInchecker6(i){
   return this.items[i].sellIn < 6
 }
 
-_sellInchecker11(i){
-  return this.items[i].sellIn < 11
-}
+
 
 };

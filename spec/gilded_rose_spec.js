@@ -3,7 +3,7 @@ describe("Gilded Rose", function() {
 
   beforeEach( function(){
     this.name = "food"
-    this.sellIn = 8
+    this.sellIn = 4
     this.quality = 4
     gildedRose = new Shop([new Item(this.name, this.sellIn, this.quality)]);
   });
@@ -34,7 +34,8 @@ describe("Gilded Rose", function() {
 
   describe("#sellInChecker", function(){
     it("#sellInChecker should check the results if its less than 11 or than 6", function(){
-      expect(gildedRose.sellInChecker(0)).toEqual(true)
+      gildedRose.sellInChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(7)
     });
   });
 
@@ -44,17 +45,17 @@ describe("Gilded Rose", function() {
   //   });
   // });
   //
-  // describe("#sellInchecker6", function(){
-  //   it("#sellInchecker6 should reutrn true base on condition", function(){
-  //     expect(gildedRose.sellInchecker6(0)).toEqual(true)
-  //   });
-  // });
-  //
-  // describe("#sellInchecker11", function(){
-  //   it("#sellInchecker11 should reutrn true base on condition", function(){
-  //     expect(gildedRose.sellInchecker11(0)).toEqual(true)
-  //   });
-  // });
+  describe("#_sellInchecker6", function(){
+    it("#_sellInchecker6 should reutrn true base on condition", function(){
+      expect(gildedRose.sellInchecker6(0)).toEqual(true)
+    });
+  });
+
+  describe("#_sellInchecker11", function(){
+    it("#_sellInchecker11 should reutrn true base on condition", function(){
+      expect(gildedRose.sellInchecker11(0)).toEqual(true)
+    });
+  });
 
 
   // it("should foo", function() {
