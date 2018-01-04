@@ -12,7 +12,13 @@ describe("Gilded Rose", function() {
     it("#notAgeBrie should minus 1 from the quality", function(){
       gildedRose.notAgeBrie(0);
       expect(gildedRose.items[0].quality).toEqual(3)
+    });
+  });
 
+  describe("#notBackstagePasses", function(){
+    it("#notBackstagePasses should minus 1 from the quality", function(){
+      gildedRose.notBackstagePasses(0);
+      expect(gildedRose.items[0].quality).toEqual(3)
     });
   });
   // it("should foo", function() {
