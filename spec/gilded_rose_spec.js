@@ -2,14 +2,17 @@ describe("Gilded Rose", function() {
 
 
   beforeEach( function(){
-    item = new Item("food",4,4);
-    gildedRose = new Shop([item]);
+    this.name = "food"
+    this.sellIn = 4
+    this.quality = 4
+    gildedRose = new Shop([new Item(this.name, this.sellIn, this.quality)]);
   });
 
   describe("#notAgeBrie", function(){
     it("#notAgeBrie should minus 1 from the quality", function(){
-      gildedRose.notAgeBrie(4);
-      expect(gildedRose[0].quality).toEqual("3")
+      gildedRose.notAgeBrie(0);
+      expect(gildedRose.items[0].quality).toEqual(3)
+
     });
   });
   // it("should foo", function() {
