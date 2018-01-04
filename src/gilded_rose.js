@@ -83,14 +83,8 @@ notSulfuras(i){
   return this.items[i].name != 'Sulfuras, Hand of Ragnaros'
 };
 
-qualityExist(i){
-  return this.items[i].quality > 0
-};
-
-
-
-qualityChecker50(i){
-  return this.items[i].quality < 50
+qualityChecker(i){
+  return this.items[i].quality > 0 && this.items[i].quality < 50
 };
 
 sellInDoesNotexist(i){
