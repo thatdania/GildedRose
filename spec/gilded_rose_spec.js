@@ -56,8 +56,9 @@ describe("Gilded Rose", function() {
   describe("#expiryRate", function(){
     it("#expiryRate should decrease the quality by 2, after once", function(){
       gildedRose.items[0].sellIn = -1
+      gildedRose.items[0].quality = 6
       gildedRose.expiryRate(0)
-      expect(gildedRose.items[0].quality).toEqual(2)
+      expect(gildedRose.items[0].quality).toEqual(4)
     });
   });
 
