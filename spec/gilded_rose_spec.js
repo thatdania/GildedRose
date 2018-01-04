@@ -54,8 +54,10 @@ describe("Gilded Rose", function() {
   });
 
   describe("#qualityChecker", function(){
-    it("#qualityChecker should return true based on the condition", function(){
-      expect(gildedRose.qualityChecker(0)).toEqual(true)
+    it("#qualityChecker should decrease the quality by 2", function(){
+      gildedRose.items[0].sellIn = -1
+      gildedRose.qualityChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(2)
     });
   });
 
