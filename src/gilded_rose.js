@@ -14,9 +14,9 @@ class Shop {
 
   updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
-      if (this.notAgeBrie() && this.notBackstagePasses()) {
+      if (this.notAgeBrie(i) && this.notBackstagePasses(i)) {
         if (this.items[i].quality > 0) {
-          if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
+          if (notSulfuras(i)) {
             this.items[i].quality = this.items[i].quality - 1;
           }
         }
@@ -25,7 +25,7 @@ class Shop {
       else {
         if (this.items[i].quality < 50) {
           this.items[i].quality = this.items[i].quality + 1;
-          if (this.notBackstagePasses()) {
+          if (this.notBackstagePasses(i)) {
 
             if (this.items[i].sellIn < 11) {
               if (this.items[i].quality < 50) {
@@ -45,10 +45,10 @@ class Shop {
 
 
       if (this.items[i].sellIn < 0) {
-        if (this.notAgeBrie()) {
-          if (this.notBackstagePasses()) {
+        if (this.notAgeBrie(i)) {
+          if (this.notBackstagePasses(i)) {
             if (this.items[i].quality > 0) {
-              if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
+              if (notSulfuras(i)) {
                 this.items[i].quality = this.items[i].quality - 1;
               }
             }
@@ -85,7 +85,7 @@ notBackstagePasses(i){
 
 notSulfuras(i){
   if(this.items[i].name != 'Sulfuras, Hand of Ragnaros'){
-    return true 
+    return true
   }
 }
 
