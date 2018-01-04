@@ -27,7 +27,7 @@ class Shop {
           this.items[i].quality = this.items[i].quality + 1;
           if (this.notBackstagePasses(i)) {
 
-            if (this.items[i].sellIn < 11) {
+            if (sellInchecker11(i)) {
               if (qualityChecker50(i)) {
                 this.items[i].quality = this.items[i].quality + 1;
               }
@@ -72,51 +72,35 @@ class Shop {
 
 
 notAgeBrie(i){
-  if (this.items[i].name != 'Aged Brie'){
-    return true
-  }
+  return this.items[i].name != 'Aged Brie'
 };
 
 notBackstagePasses(i){
-  if(this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'){
-    return true
-  }
+  return this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'
 };
 
 notSulfuras(i){
-  if(this.items[i].name != 'Sulfuras, Hand of Ragnaros'){
-    return true
-  }
+  return this.items[i].name != 'Sulfuras, Hand of Ragnaros'
 };
 
 qualityExist(i){
-  if(this.items[i].quality > 0){
-    return true
-  }
+  return this.items[i].quality > 0
 };
 
 qualityChecker50(i){
-  if(this.items[i].quality < 50){
-    return true
-  }
+  return this.items[i].quality < 50
 };
 
 sellInexist(i){
-  if(this.items[i].sellIn < 0){
-    return true
-  }
+  return this.items[i].sellIn < 0
 }
 
 sellInchecker6(i){
-  if(this.items[i].sellIn < 6){
-    return true
-  }
+  return this.items[i].sellIn < 6
 }
 
 sellInchecker11(i){
-  if(this.items[i].sellIn < 11){
-    return true
-  }
+  return this.items[i].sellIn < 11
 }
 
 };
