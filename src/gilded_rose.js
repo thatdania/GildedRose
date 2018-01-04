@@ -87,11 +87,13 @@ qualityExist(i){
   return this.items[i].quality > 0
 };
 
+
+
 qualityChecker50(i){
   return this.items[i].quality < 50
 };
 
-sellInexist(i){
+sellInDoesNotexist(i){
   return this.items[i].sellIn < 0
 }
 
