@@ -56,7 +56,11 @@ expiryRateChecker(i){
 }
 
 qualityChecker(i){
-  return this.items[i].quality > 0 && this.items[i].quality < 50
+  if(this.items[i].quality > 0 && this.items[i].quality < 50){
+    return true
+  } else {
+    return "Unacceptable Good, Sorry"
+  }
 };
 
 _expiryRate(i){
