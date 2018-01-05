@@ -12,79 +12,29 @@ class Shop {
   }
 
 
-  updateQuality() {
+updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
-      if (this.notAgeBrie(i) && this.notBackstagePasses(i)) {
-        if (qualityChecker(i)) {
-          if (notSulfuras(i)) {
-            this.items[i].quality -= 1;
-          }
-        }
-      }
-
-      else {
-        if (qualityChecker(i)) {
-          this.items[i].quality += 1;
-          if (this.notBackstagePasses(i)) {
-
-            if (sellInchecker11(i)) {
-              if (qualityChecker(i)) {
-                this.items[i].quality += 1;
-              }
-            }
-
-            if (sellInchecker6(i)) {
-              if (qualityChecker(i)) {
-                this.items[i].quality += 1;
-              }
-            }
-
-          }
-        }
-      }
-
-
-      if (sellInexist(i)) {
-        if (this.notAgeBrie(i)) {
-          if (this.notBackstagePasses(i)) {
-            if (qualityChecker(i)) {
-              if (notSulfuras(i)) {
-                this.items[i].quality -= 1;
-              }
-            }
-          }
-          else {
-            this.items[i].quality -= this.items[i].quality;
-          }
-        }
-
-        else {
-          if (qualityChecker(i)) {
-            this.items[i].quality += 1;
-          }
-        }
-
-      }
     }
-
     return this.items;
-  }
+}
+
+
 
 agedBrieChecker(i){
-  if(this.items[i].name === 'Aged Brie'){
+  if(this.items[i].name === 'Aged Brie' && this.qualityChecker(i)){
     this.items[i].quality += 1
   }
 }
 
 backstagePassesChecker(i){
-  if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert'){
+  if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert' && this.qualityChecker(i)){
     this.sellInChecker(i);
     this._backstageExpirtySellIn(i);
   }
 }
 
 sulfurasChecker(i){
-  if(this.items[i].name === 'Sulfuras, Hand of Ragnaros'){
+  if(this.items[i].name === 'Sulfuras, Hand of Ragnaros' && this.qualityChecker(i)){
     this.items[i].quality = this.items[i].quality
   }
 }
@@ -99,7 +49,7 @@ sellInChecker(i){
 };
 
 expiryRateChecker(i){
-  this.expiryRate(i)
+  this._expiryRate(i)
   if(this.items[i].quality < 0){
     this.items[i].quality = 0
   }

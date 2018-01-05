@@ -14,6 +14,11 @@ describe("Gilded Rose", function() {
       gildedRose.agedBrieChecker(0)
       expect(gildedRose.items[0].quality).toEqual(5)
     });
+
+    // it("#agedBrie checks whether the quality is above 50", function(){
+    //   gildedRose.items[0].quality = 52
+    //   expect(gildedRose.items[0].quality)
+    // });
   });
 
   describe("#backstagePassesChecker", function(){
@@ -57,6 +62,11 @@ describe("Gilded Rose", function() {
   describe("#qualityChecker", function(){
     it("#qualityChecker should return true based on the condition", function(){
       expect(gildedRose.qualityChecker(0)).toEqual(true)
+    });
+
+    it("#qualityChecker returns false message for goods if above 50", function(){
+      gildedRose.items[0].quality = 52 
+      expect(gildedRose.qualityChecker(0)).toEqual("Unacceptable Good, Sorry")
     });
   });
 
