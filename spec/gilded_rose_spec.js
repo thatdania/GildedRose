@@ -46,7 +46,7 @@ describe("Gilded Rose", function() {
   });
 
   describe("#expiryRateChecker", function(){
-    it("#expiry Rate hecker should check sellIn and quality", function(){
+    it("#expiry Rate checker should check sellIn and quality", function(){
       gildedRose.items[0].sellIn = -1
       gildedRose.items[0].quality = 1
       gildedRose.expiryRateChecker(0)
@@ -62,10 +62,10 @@ describe("Gilded Rose", function() {
     });
   });
 
-  describe("#backstageExpirtySellIn", function(){
-    it("#backstageExpirtySellIn puts the quality value to zero", function(){
+  describe("#_backstageExpirtySellIn", function(){
+    it("#_backstageExpirtySellIn puts the quality value to zero", function(){
       gildedRose.items[0].sellIn = -1
-      gildedRose.backstageExpirtySellIn(0)
+      gildedRose._backstageExpirtySellIn(0)
       expect(gildedRose.items[0].quality).toEqual(0)
     });
   });

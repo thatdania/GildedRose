@@ -79,7 +79,7 @@ agedBrie(i){
 backstagePassesChecker(i){
   if(this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert'){
     this.sellInChecker(i);
-    this.backstageExpirtySellIn(i);
+    this._backstageExpirtySellIn(i);
   }
 }
 
@@ -98,17 +98,24 @@ sellInChecker(i){
   }
 };
 
+expiryRateChecker(i){
+  this.expiryRate(i)
+  if(this.items[i].quality < 0){
+    this.items[i].quality = 0
+  }
+}
+
 expiryRate(i){
   if(this.items[i].sellIn < 0){
     this.items[i].quality -= 2
   }
 }
 
-backstageExpirtySellIn(i){
+_backstageExpirtySellIn(i){
   if(this.items[i].sellIn < 0){
     this.items[i].quality = 0
   }
-} //backstage
+}
 
 qualityChecker(i){
   return this.items[i].quality > 0 && this.items[i].quality < 50
