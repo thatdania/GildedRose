@@ -45,6 +45,15 @@ describe("Gilded Rose", function() {
     });
   });
 
+  describe("#expiryRateChecker", function(){
+    it("#expiry Rate hecker should check sellIn and quality", function(){
+      gildedRose.items[0].sellIn = -1
+      gildedRose.items[0].quality = 1
+      gildedRose.expiryRateChecker(0)
+      expect(gildedRose.items[0].quality).toEqual(0)
+    });
+  });
+
   describe("#expiryRate", function(){
     it("#expiryRate should decrease the quality by 2, after once", function(){
       gildedRose.items[0].sellIn = -1
