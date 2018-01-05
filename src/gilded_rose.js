@@ -70,7 +70,7 @@ class Shop {
     return this.items;
   }
 
-agedBrie(i){
+agedBrieChecker(i){
   if(this.items[i].name === 'Aged Brie'){
     this.items[i].quality += 1
   }
@@ -105,7 +105,11 @@ expiryRateChecker(i){
   }
 }
 
-expiryRate(i){
+qualityChecker(i){
+  return this.items[i].quality > 0 && this.items[i].quality < 50
+};
+
+_expiryRate(i){
   if(this.items[i].sellIn < 0){
     this.items[i].quality -= 2
   }
@@ -116,10 +120,6 @@ _backstageExpirtySellIn(i){
     this.items[i].quality = 0
   }
 }
-
-qualityChecker(i){
-  return this.items[i].quality > 0 && this.items[i].quality < 50
-};
 
 _sellInchecker11(i){
   return this.items[i].sellIn < 11
