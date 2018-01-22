@@ -39,5 +39,3 @@ line of code, and documented them as such in the images below.
 
 Writing what every file's role was and did allowed me to map the program and start seeing what I could test and extract for refactoring.
 Please do attend to the code to see my attempt on the refactor. 
-
-## Code Reflection
