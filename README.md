@@ -1,18 +1,17 @@
 # Gilded Rose
 
 The objective for this tech-test is to be able to understand the written code, refactor the code given and add a feature
-to the code.
-
-Gilded Rose is a small business that sells goods. Their goods
-decrease in quality by the days, and specific goods decrease
+to the code.Gilded Rose is a small business that sells goods. Their goods decrease in quality by the days, and specific goods decrease
 or increase in value depending on the good.
 
 ## How To Use
 
+Given that this was a refactoring exercises for me, there is currently not a way to activate to see the result of the code. This was
+a tech test practice under a limited amount of time which thus, ended up as a refactoring exercise. 
+
 ## Approach
 
 The first step was to understand what the requirements were. I summarised what the requirements were based on what was written by the client.
-
 
 ** What Items Have **
 - All items have a SellIn value which denotes the number of days we have to sell the item
@@ -39,5 +38,6 @@ line of code, and documented them as such in the images below.
 ![](images/unnamed.jpg)
 
 Writing what every file's role was and did allowed me to map the program and start seeing what I could test and extract for refactoring.
+Please do attend to the code to see my attempt on the refactor. 
 
 ## Code Reflection
